@@ -71,11 +71,11 @@ The app shows the current AQI in Lahore and gives predictions for the next 24, 4
 
 Files
 
- 'app.py' - Streamlit app
- 'feature_pipeline.py' - gets and processes the data
- 'backfill.py' - creates historical data
- 'training_pipeline.py' - trains the models
- 'prediction.py' - prediction related code
+ *'app.py' - Streamlit app
+ *'feature_pipeline.py' - gets and processes the data
+ *'backfill.py' - creates historical data
+ *'training_pipeline.py' - trains the models
+ *'prediction.py' - prediction related code
 
 Future Improvements
 
