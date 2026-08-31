@@ -1,20 +1,24 @@
- Lahore AQI Predictor 
+AQI Predictor
+Hi, I'm Ayema binte Ijaz, a Business Intelligence & Analytics student at Beaconhouse National University. I worked on this project as part of my internship at 10Pearls.
 
 This project is about predicting the Air Quality Index (AQI) of Lahore for the next 3 days using machine learning.
 
- What I did
- 
+What I did
+
 I collected air quality and weather data and used it to train machine learning models. The data was processed and stored using Hopsworks, and the trained models were also saved there.
+
 I trained separate Random Forest models to predict AQI for:
-24 hours
-48 hours
-72 hours
+
+* 24 hours
+* 48 hours
+* 72 hours
 
 The final predictions are shown through a Streamlit web app.
 
 Tools Used
 
 * Python
+* VS Code
 * Pandas
 * NumPy
 * Scikit-learn
@@ -23,12 +27,16 @@ Tools Used
 * Hopsworks
 * Streamlit
 * Open-Meteo API
+* GitHub
 
 How the project works
 
 The data is first collected from the API and then processed to create useful features. These features are stored in Hopsworks.
-I also created historical data using the backfill pipeline so that there was enough data to train the models.
+
+I also created historical data using the backfill pipeline so there was enough data to train the models.
+
 The training pipeline uses the historical data to train the Random Forest models. The trained models are then stored in the Hopsworks Model Registry.
+
 The Streamlit app loads the latest data and the trained models and displays the current AQI along with the predictions.
 
 Features
@@ -54,21 +62,25 @@ Model Results
 | 24 hours | 17.61 | 22.49 |  0.055 |
 | 48 hours | 21.87 | 27.70 | -0.430 |
 | 72 hours | 25.80 | 32.17 | -1.030 |
+
 The model performs better for the shorter forecast. The 48 and 72 hour predictions are more difficult because AQI can change quite a lot over a longer period.
 
 Streamlit App
+
 The app shows the current AQI in Lahore and gives predictions for the next 24, 48 and 72 hours.
 
 Files
-'app.py' - Streamlit app
-'feature_pipeline.py' - gets and processes the data
-'backfill.py' - creates historical data
-'training_pipeline.py' - trains the models
-'prediction.py' - prediction related code
+
+ 'app.py' - Streamlit app
+ 'feature_pipeline.py' - gets and processes the data
+ 'backfill.py' - creates historical data
+ 'training_pipeline.py' - trains the models
+ 'prediction.py' - prediction related code
 
 Future Improvements
-The project can be improved further by adding automatic updates, model retraining, AQI alerts and model explainability.
 
-Pearls AQI Predictor
+The project can be improved further by adding automatic updates, model retraining, AQI alerts and model explainability
 
-Lahore, Pakistan
+Final Note
+
+This project was completed as part of my internship at 10Pearls and helped me apply machine learning and data engineering concepts to a real-world AQI prediction problem.
